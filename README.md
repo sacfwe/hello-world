@@ -9,7 +9,7 @@ while ans != "esc":
     op = random.randint(0, 3)
     eq = str(add1) + ops[op] + str(add2)
     val = eval(eq)
-    print "Q%d: %s=" % (i, eq)
+    print "cin%d: %s=" % (i, eq)
     ans = raw_input("A: ")
     if ans == 'esc':
         break
