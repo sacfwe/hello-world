@@ -7,6 +7,7 @@ from random import randint
 
 sym = [' + ', ' - ']
 
+
 fobj = open('math.txt', 'w')
 
 
@@ -18,6 +19,7 @@ def base_exei_oneline(pmin, pmax, mmin, mmax, multimin, multimax, divmin, divmax
     divmin,divmax:除法转换成乘法后，乘数、被乘数最小最大值
     '''
 
+    plus = str(randint(pmin, pmax)).rjust(2) + ' + ' + str(randint(pmin, pmax)).rjust(2) + ' ='
 
     minus1 = randint(mmin, mmax)
     minus2 = randint(mmin, mmax)
@@ -29,7 +31,7 @@ def base_exei_oneline(pmin, pmax, mmin, mmax, multimin, multimax, divmin, divmax
     multi2 = randint(multimin, multimax)
     multi = str(multi1).rjust(2) + ' x ' + str(multi2).rjust(2) + ' ='
 
-
+   
     div1 = randint(divmin, divmax)
     div2 = randint(divmin, divmax)
     divmulti = div1 * div2
@@ -45,6 +47,7 @@ def base_exei_oneline(pmin, pmax, mmin, mmax, multimin, multimax, divmin, divmax
 def base_exeicise():
     for col in range(10):
         base_exei_oneline(1, 20, 1, 50, 1, 9, 1, 9)
+
 
 
 def type1_str(summin=1, summax=100):
@@ -101,6 +104,7 @@ def type2_str(multimin=1, multimax=9, summin=1, summax=100):
     return arithmetic
 
 
+
 def type3_str(multimin=1, multimax=9, summin=1, summax=100):
     '''
     multimin,multimax:乘数、被乘数最小最大值
@@ -125,9 +129,9 @@ def type3_str(multimin=1, multimax=9, summin=1, summax=100):
 
 
 def oneday_homework():
-
+   
     base_exeicise()
-
+   
     plus1 = type1_str()
     plus2 = type1_str()
 
@@ -136,13 +140,13 @@ def oneday_homework():
     plus4 = type3_str()
     plus5 = type3_str()
 
-
+ 
     line = [plus1, plus2, plus3]
     lines = (29 * ' ').join(line)
     print lines
     fobj.writelines(lines + '\r\n' * 4)
 
- 
+    
     line = [plus4, plus5]
     lines = (20 * ' ').join(line)
     print lines
