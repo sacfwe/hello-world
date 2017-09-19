@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 __author__ = 'zhengbiqing 460356155@qq.com'
-
+__doc__ = """武汉市光谷一小二年级数学口算自动出题程序 2017-05-31"""
 
 from random import randint
 
